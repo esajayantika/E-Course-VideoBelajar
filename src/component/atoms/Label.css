@@ -1,0 +1,11 @@
+.label-atom {
+  align-self: flex-start;
+}
+.label-atom.body-medium-regular {
+  color: var(--textdark-secondary);
+}
+.label-atom.is-required::after {
+  content: " *";
+  color: var(--main-tertiary);
+  font-weight: bold;
+}

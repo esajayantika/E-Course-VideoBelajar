@@ -1,0 +1,167 @@
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  padding: var(--space-5) var(--space-4);
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: var(--gap-xl);
+  max-width: 590px;
+  width: 100%;
+  border: 1px solid var(--border-2);
+  padding: var(--space-5) var(--space-4);
+  border-radius: var(--radius-sm);
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+p {
+  color: var(--textdark-secondary);
+}
+
+/* ikon mata di password*/
+.icon-button {
+  display: flex;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* tag lupa password */
+a {
+  align-self: flex-end;
+  color: var(--textdark-secondary);
+  text-decoration: none;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  width: 100%;
+}
+
+/* teks divider */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: var(--gap-lg) 0;
+  color: var(--greyscale-600);
+  font-size: 14px;
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+/* garis kiri kanan */
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--border-2);
+}
+/* jarak garis dengan teks di tengah */
+.divider::before {
+  margin-right: var(--space-3);
+}
+.divider::after {
+  margin-left: var(--space-3);
+}
+
+/* Selector */
+select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  border: 1px solid #f1f1f1;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Drop down icon */
+  background-image: url(../public/Icondropdown.svg);
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+.phone-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+/* bungkus gabungan flag box dan input number */
+.phone-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+/* ikon bendera */
+.flag-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 48px;
+  padding: 4px 10px;
+  border: 1px solid #f1f1f1;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.flag-icon {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+#code-number {
+  background: transparent;
+  background-image: url(./public/Icondropdown.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 10px;
+  padding-right: 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/* input no.HP */
+.phone-input {
+  flex: 1;
+  min-width: 0;
+  height: 48px;
+}
+@media (min-width: 768px) {
+  header {
+    padding: 12px 120px 12px 80px;
+  }
+  .container-fluid {
+    padding: 64px 120px;
+  }
+  #form {
+    padding: 36px;
+  }
+}

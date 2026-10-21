@@ -1,0 +1,29 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--gap-lg);
+}
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+}
+.input-control {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+/* if suffix */
+.input-control.has-suffix .input-atom {
+  padding-right: 44px;
+}
+
+.input-suffix {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+}

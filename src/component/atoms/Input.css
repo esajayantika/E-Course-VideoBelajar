@@ -1,0 +1,25 @@
+.input-atom {
+  display: block;
+  width: 100%;
+  height: 48px;
+  font-size: var(--space-4);
+  border-radius: var(--radius-md) !important;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--border-2);
+  outline: none;
+  font-family: inherit;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+.input-atom:focus {
+  border-color: var(--border-3);
+}
+
+.input-atom:-webkit-autofill,
+.input-atom:-webkit-autofill:hover,
+.input-atom:-webkit-autofill:focus,
+.input-atom:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  border-radius: var(--radius-md) !important;
+}

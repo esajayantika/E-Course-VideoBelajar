@@ -1,0 +1,76 @@
+/* Default setting */
+.btn-app {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-md);
+  padding: 10px 24px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+/* full width */
+.btn-app.is-full {
+  width: 100%;
+}
+
+/* color */
+.btn-app.is-primary {
+  --c: var(--main-primary);
+  --c-soft: var(--main-primary-100);
+}
+.btn-app.is-secondary {
+  --c: var(--main-secondary);
+  --c-soft: var(--main-secondary-100);
+}
+
+/* style */
+.btn-app.is-solid {
+  background: var(--c);
+  color: var(--textlight-primary);
+}
+.btn-app.is-soft {
+  background: var(--c-soft);
+  color: var(--c);
+}
+.btn-app.is-outline {
+  background: transparent;
+  border-color: var(--c);
+  color: var(--c);
+}
+
+/* btn-google */
+.btn-app.is-neutral.is-outline {
+  border-color: var(--border);
+  color: var(--border-3);
+}
+.btn-app.prefix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-md);
+}
+.btn-prefix {
+  display: flex;
+}
+.btn-prefix img {
+  width: 20px;
+  height: 20px;
+}
+
+/* disabled btn */
+.btn-app:disabled {
+  cursor: not-allowed;
+  color: var(--greyscale-500);
+}
+.btn-app.is-solid:disabled {
+  background: var(--greyscale-400);
+}
+.btn-app.is-soft:disabled {
+  background: var(--greyscale-300);
+}
+.btn-app.is-outline:disabled {
+  background: var(--greyscale-100);
+  border-color: var(--greyscale-400);
+}
