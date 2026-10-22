@@ -1,4 +1,5 @@
 import "../styles/auth.css";
+import { useNavigate } from "react-router";
 
 import eyeIcon from "../assets/mdi_eye-off.svg";
 import google from "../assets/logos_google-icon.svg";
@@ -7,6 +8,12 @@ import Navbar from "../component/molecule/Navbar.jsx";
 import Button from "../component/atoms/Button.jsx";
 
 function LoginPage() {
+  const Navigate = useNavigate();
+
+  const HandleRegister = () => {
+    Navigate("/register");
+  };
+
   return (
     <>
       <Navbar></Navbar>
@@ -35,7 +42,9 @@ function LoginPage() {
           </a>
           <div className="button-group">
             <Button>Masuk</Button>
-            <Button variant="soft">Daftar</Button>
+            <Button variant="soft" onClick={HandleRegister}>
+              Daftar
+            </Button>
           </div>
           <div className="divider">atau</div>
           <Button color="neutral" variant="outline" prefix={<img src={google} alt="" />}>
