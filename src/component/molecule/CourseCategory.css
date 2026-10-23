@@ -1,0 +1,44 @@
+.courses-category {
+  display: flex;
+  margin-bottom: 20px;
+  /* kondisi scrol ke kanan di hp */
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+/* bar category */
+.category {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: var(--spae-2) 0px;
+  cursor: pointer;
+  position: relative;
+  /* mencegah konten menyusut */
+  flex-shrink: 0;
+}
+/* kondisi aktif */
+.category.active {
+  color: var(--main-tertiary);
+  font-weight: 500;
+}
+/* bar status aktif */
+.category.active::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  width: 100%;
+  left: 0px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--main-tertiary);
+}
+
+@media (min-width: 1024px) {
+  .courses-category {
+    gap: 25px;
+  }
+}

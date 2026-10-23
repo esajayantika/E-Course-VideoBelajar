@@ -1,0 +1,35 @@
+/* Banner wrapper */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/HomeAsset/bgheroes.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: var(--space-5) 20px;
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  color: var(--textlight-primary);
+}
+.hero-button {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+@media (min-width: 1024px) {
+  .hero-content {
+    padding: 50px;
+  }
+  .hero-section {
+    overflow: hidden;
+  }
+}

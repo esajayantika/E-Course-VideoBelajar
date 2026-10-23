@@ -1,0 +1,329 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 50px;
+  display: flex;
+  padding-top: 8px;
+  width: 100%;
+  /* efek navbar tembus pandang */
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.courses-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 20px auto;
+  width: 100%;
+  gap: 10px;
+  box-sizing: border-box;
+  border: none;
+}
+/* judul kategori courses */
+.courses-title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.courses-title h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 600;
+  line-height: 1.1;
+}
+.courses-title h3 {
+  text-align: left;
+  font-size: clamp(14px, 4vw, 16px);
+  font-weight: 500;
+  color: #333333ad;
+}
+.courses-category {
+  display: flex;
+  margin-bottom: 20px;
+  /* kondisi scrol ke kanan di hp */
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+  gap: 20px;
+}
+/* bar category */
+.category {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 8px 0px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333ad;
+  cursor: pointer;
+  position: relative;
+  font-family: "DM Sans", sans-serif;
+  /* mencegah konten menyusut */
+  flex-shrink: 0;
+}
+/* kondisi aktif */
+.category.active {
+  color: #f64920;
+  font-weight: 500;
+}
+/* bar status aktif */
+.category.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  left: 0px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #f64920;
+}
+
+/* Banner Action Section */
+.action-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/Hero/bgfooter.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 24px 20px;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.action-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px;
+}
+.action-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.action-detail1 {
+  font-weight: 500;
+  font-size: 16px;
+  color: #c1c2c4;
+}
+.action-detail2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(24px, 4vw, 32px);
+  text-align: center;
+  line-height: 1.1;
+  color: #ffffff;
+}
+.action-detail3 {
+  font-weight: 400;
+  text-align: center;
+  font-size: 15px;
+  color: #f4f5fa;
+}
+.action-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.action-field {
+  width: 100%;
+  max-width: 525px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "DM Sans", sans-serif;
+}
+.action-field:focus {
+  outline-color: #4a505c;
+}
+.action-btn {
+  width: 100%;
+  height: 40px;
+  background-color: #ffbd3a;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .action-section {
+    height: 400px;
+    justify-content: center;
+  }
+  .action-content {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .action-input {
+    position: relative;
+    max-width: 425px;
+  }
+  .action-field {
+    width: 100%;
+    padding-right: 132px;
+    text-align: start;
+    padding-left: 40px;
+  }
+  .action-btn {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    right: 4px;
+    width: 125px;
+    height: auto;
+  }
+}
+.about-detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  margin: 28px auto;
+}
+.about-detail img {
+  height: 25px;
+  align-self: flex-start;
+}
+.about-outro {
+  width: 100%;
+  font-weight: 700;
+  font-size: clamp(14px, 4vw, 18px);
+}
+.address {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+}
+.about-category {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  gap: 18px;
+}
+.sub-category {
+  gap: 10px;
+  width: 100%;
+}
+.sub-category h4 {
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  /* Drop right icon */
+  background-image: url(../public/Icondropdown.svg);
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  padding-right: 30px;
+}
+.sub-category p {
+  display: none;
+}
+.end-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 18px;
+  width: 100%;
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.social-media img {
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+}
+.copy-right {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  color: #333333ad;
+}
+/* display grid footer */
+@media (min-width: 1024px) {
+  .about-detail {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-content: start;
+    column-gap: 40px;
+    row-gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  .about-detail img,
+  .about-outro,
+  .address {
+    grid-column: 1;
+  }
+  .about-outro {
+    max-width: 380px;
+  }
+  /* baris kategori */
+  .about-category {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    flex-direction: row;
+    gap: 60px;
+    width: auto;
+    text-align: left;
+  }
+  .sub-category {
+    width: auto;
+  }
+  .sub-category h4 {
+    background-image: none;
+    padding-right: 0;
+    cursor: default;
+  }
+  .sub-category p {
+    display: block;
+    line-height: 2;
+  }
+  .end-content {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 24px;
+    border-top: 1px solid #e0e0e0;
+  }
+}
