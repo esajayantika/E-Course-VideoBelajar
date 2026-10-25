@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import eyeIcon from "../assets/mdi_eye-off.svg";
 import google from "../assets/logos_google-icon.svg";
-import Flag from "../assets/indonesia (ID).svg";
+import Flag from "../assets/Indonesia (ID).svg";
 import InputField from "../component/molecule/InputField.jsx";
 import Button from "../component/atoms/Button.jsx";
 import Label from "../component/atoms/Label.jsx";
