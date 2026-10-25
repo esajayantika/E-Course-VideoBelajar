@@ -1,8 +1,9 @@
 import "./Button.css";
 
-function Button({ children, color = "primary", variant = "solid", fullWidth = false, prefix, className = "", ...props }) {
+function Button({ children, type = "button", color = "primary", variant = "solid", fullWidth = false, prefix, className = "", ...props }) {
   return (
     <button
+      type={type}
       {...props}
       className={`btn-app body-medium-bold 
       is-${color} 

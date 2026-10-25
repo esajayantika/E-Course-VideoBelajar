@@ -1,5 +1,8 @@
 import "../styles/auth.css";
 import { useNavigate } from "react-router";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import eyeIcon from "../assets/mdi_eye-off.svg";
 import google from "../assets/logos_google-icon.svg";
