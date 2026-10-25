@@ -15,7 +15,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
         </Route>
         <Route element={<MainLayout navbar={<Navhome />} />}>
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
         </Route>
       </Routes>
     </>
