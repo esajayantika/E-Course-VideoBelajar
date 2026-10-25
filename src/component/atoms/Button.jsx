@@ -1,6 +1,6 @@
 import "./Button.css";
 
-function Button({ children, color = "primary", variant = "solid", fullWidth = false, prefix, ...props }) {
+function Button({ children, color = "primary", variant = "solid", fullWidth = false, prefix, className = "", ...props }) {
   return (
     <button
       {...props}
@@ -8,7 +8,8 @@ function Button({ children, color = "primary", variant = "solid", fullWidth = fa
       is-${color} 
       is-${variant} 
       ${fullWidth ? "is-full" : ""} 
-      ${prefix ? "prefix" : ""}`}
+      ${prefix ? "prefix" : ""}
+      ${className}`}
     >
       {prefix && <span className="btn-prefix">{prefix}</span>}
       {children}

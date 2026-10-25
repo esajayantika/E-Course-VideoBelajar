@@ -1,0 +1,106 @@
+.about-detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--gap-lg);
+  justify-content: center;
+  margin: 28px auto;
+}
+.about-detail img {
+  height: 25px;
+  align-self: flex-start;
+}
+
+.about-category {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  gap: 18px;
+}
+.sub-category {
+  gap: var(--gap-lg);
+  width: 100%;
+}
+.sub-category h4 {
+  /* Drop right icon */
+  background-image: url(../../assets/Icondropdown.svg);
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  padding-right: 30px;
+}
+.sub-category p {
+  display: none;
+}
+.end-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 18px;
+  width: 100%;
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-lg);
+}
+.social-media img {
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* display grid footer */
+@media (min-width: 1024px) {
+  .about-detail {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-content: start;
+    column-gap: 40px;
+    row-gap: var(--gap-lg);
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  .about-detail img,
+  .about-outro,
+  .address {
+    grid-column: 1;
+  }
+  .about-outro {
+    max-width: 380px;
+  }
+  /* baris kategori */
+  .about-category {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    flex-direction: row;
+    gap: 60px;
+    width: auto;
+    text-align: left;
+  }
+  .sub-category {
+    width: auto;
+  }
+  .sub-category h4 {
+    background-image: none;
+    padding-right: 0;
+    cursor: default;
+  }
+  .sub-category p {
+    display: block;
+    line-height: 2;
+  }
+  .end-content {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--greyscale-300);
+  }
+}

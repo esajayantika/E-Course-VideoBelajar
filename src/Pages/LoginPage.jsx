@@ -4,7 +4,6 @@ import { useNavigate } from "react-router";
 import eyeIcon from "../assets/mdi_eye-off.svg";
 import google from "../assets/logos_google-icon.svg";
 import InputField from "../component/molecule/InputField.jsx";
-import Navbar from "../component/molecule/Navbar.jsx";
 import Button from "../component/atoms/Button.jsx";
 
 function LoginPage() {
@@ -14,10 +13,13 @@ function LoginPage() {
     Navigate("/register");
   };
 
+  const HandleHome = () => {
+    Navigate("/home");
+  };
+
   return (
     <>
-      <Navbar></Navbar>
-      <div className="container-fluid">
+      <div className="container-fluid" style={{ padding: "var(--space-5) var(--space-1)" }}>
         <form action="#" id="form">
           <div className="form-header">
             <h3 className="heading-4">Masuk ke Akun</h3>
@@ -41,7 +43,7 @@ function LoginPage() {
             Lupa Password?
           </a>
           <div className="button-group">
-            <Button>Masuk</Button>
+            <Button onClick={HandleHome}>Masuk</Button>
             <Button variant="soft" onClick={HandleRegister}>
               Daftar
             </Button>

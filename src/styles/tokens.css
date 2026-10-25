@@ -80,7 +80,7 @@
 .heading-3 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 32px;
+  font-size: clamp(24px, 19.43px + 1.43vw, 32px);
 }
 .heading-4 {
   font-family: "Poppins", sans-serif;
@@ -103,7 +103,7 @@
 .body-large-bold {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: clamp(14px, 11.71px + 0.71vw, 18px);
   line-height: 140%;
   letter-spacing: 0.2px;
 }
@@ -117,7 +117,7 @@
 .body-large-medium {
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: clamp(16px, 14px + 0.39vw, 18px);
   line-height: 140%;
   letter-spacing: 0.2px;
 }
@@ -153,7 +153,7 @@
 .body-medium-regular {
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: clamp(14px, 12.86px + 0.36vw, 16px);
   line-height: 140%;
   letter-spacing: 0.2px;
 }

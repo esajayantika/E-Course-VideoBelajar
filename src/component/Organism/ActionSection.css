@@ -1,0 +1,69 @@
+/* Banner Action Section */
+.action-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/HomeAsset/bgfooter.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: var(--space-5) 20px;
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+}
+.action-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px;
+}
+.action-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-md);
+}
+
+.action-input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .action-section {
+    height: 400px;
+    justify-content: center;
+  }
+  .action-content {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .action-input {
+    position: relative;
+    max-width: 525px;
+    height: 58px;
+  }
+  .action-input .action-field {
+    width: 100%;
+    height: 100%;
+    padding-right: 145px;
+  }
+  .action-input .action-btn {
+    position: absolute;
+    top: var(--space-2);
+    bottom: var(--space-2);
+    right: var(--space-2);
+    width: 125px;
+    height: auto;
+  }
+}
