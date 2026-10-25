@@ -5,7 +5,6 @@ import eyeIcon from "../assets/mdi_eye-off.svg";
 import google from "../assets/logos_google-icon.svg";
 import Flag from "../assets/indonesia (ID).svg";
 import InputField from "../component/molecule/InputField.jsx";
-import Navbar from "../component/molecule/Navbar.jsx";
 import Button from "../component/atoms/Button.jsx";
 import Label from "../component/atoms/Label.jsx";
 
@@ -18,8 +17,7 @@ function RegisterPage() {
 
   return (
     <>
-      <Navbar />
-      <div className="container-fluid">
+      <div className="container-fluid" style={{ padding: "var(--space-5) var(--space-1)" }}>
         <form action="#" id="form">
           {/* Group Header */}
           <div className="form-header">

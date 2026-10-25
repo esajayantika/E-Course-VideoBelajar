@@ -1,6 +1,7 @@
 .courses-category {
   display: flex;
   margin-bottom: 20px;
+  margin-top: var(--space-5);
   /* kondisi scrol ke kanan di hp */
   overflow-x: auto;
   overflow-y: hidden;

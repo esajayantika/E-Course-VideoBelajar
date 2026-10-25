@@ -1,7 +1,7 @@
 import "./Input.css";
 
-function Input(props) {
-  return <input className="input-atom" {...props} />;
+function Input({ className = "", ...props }) {
+  return <input {...props} className={`input-atom ${className}`} />;
 }
 
 export default Input;
