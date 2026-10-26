@@ -1,4 +1,5 @@
 import "../styles/auth.css";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -11,10 +12,12 @@ import Button from "../component/atoms/Button.jsx";
 
 const loginSchema = z.object({
   email: z.string().min(1, { message: "Email harus diisi!" }).email({ message: "Format email tidak valid !" }),
-  password: z.string().min(8, { message: "minimal 8 karakter!" }).regex(/[A-Z]/, "Harus ada minimal 1 huruf besar!").regex(/[0-9]/, "Harus ada minimal 1 angka!"),
+  password: z.string().min(8, { message: "Minimal 8 karakter!" }).regex(/[A-Z]/, "Harus ada minimal 1 huruf besar!").regex(/[0-9]/, "Harus ada minimal 1 angka!"),
 });
 
 function LoginPage() {
+  const [showPassword, setShowPassword] = useState(false);
+
   const Navigate = useNavigate();
 
   const {
@@ -50,10 +53,11 @@ function LoginPage() {
             id="password"
             labelText="Kata Sandi"
             required
-            type="password"
+            type={showPassword ? "text" : "password"}
             error={errors.password?.message}
             suffix={
-              <button type="button" className="icon-button" aria-label="Tampilkan kata sandi">
+              // set tombol sebagai saklar meng-negasi bolean state sebelumnya
+              <button type="button" className="icon-button" aria-label="Tampilkan kata sandi" onClick={() => setShowPassword((prev) => !prev)}>
                 <img src={eyeIcon} alt="" />
               </button>
             }
