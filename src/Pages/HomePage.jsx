@@ -2,6 +2,8 @@ import "../styles/home.css";
 import { useState } from "react";
 import { useOutletContext } from "react-router";
 
+import imageSrc1 from "/courses/auditorcontent1.jpg";
+
 import HeroSec from "../component/Organism/HeroSec.jsx";
 import CourseCategory from "../component/molecule/CourseCategory.jsx";
 import CourseCard from "../component/Organism/CourseCard.jsx";
