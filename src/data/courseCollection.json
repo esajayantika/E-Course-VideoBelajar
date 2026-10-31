@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "price": "Rp. 300K",
+    "kelas": "TikTok & Reels Viral untuk UMKM",
+    "imageSrc": "../assets/HomeAsset/auditorcontent1.jpg"
+  },
+  {
+    "id": 2,
+    "price": "Rp. 300K",
+    "kelas": "Performance Marketing 101: Strategi ROI",
+    "imageSrc": "../assets/HomeAsset/auditorcontent2.jpg"
+  },
+  {
+    "id": 3,
+    "price": "Rp. 300K",
+    "kelas": "Financial Modeling Startup & UMKM",
+    "imageSrc": "../assets/HomeAsset/auditorcontent3.jpg"
+  },
+  {
+    "id": 4,
+    "price": "Rp. 300K",
+    "kelas": "Manajemen Gudang & Stok Tanpa Selisih",
+    "imageSrc": "../assets/HomeAsset/auditorcontent4.jpg"
+  },
+  {
+    "id": 5,
+    "price": "Rp. 300K",
+    "kelas": "Operational Excellence & Otomasi Bisnis",
+    "imageSrc": "../assets/HomeAsset/auditorcontent5.jpg"
+  },
+  {
+    "id": 6,
+    "price": "Rp. 300K",
+    "kelas": "Data-Driven Decision Making",
+    "imageSrc": "../assets/HomeAsset/auditorcontent6.jpg"
+  },
+  {
+    "id": 7,
+    "price": "Rp. 300K",
+    "kelas": "Public Speaking & Kpercayaan Diri",
+    "imageSrc": "../assets/HomeAsset/auditorcontent7.jpg"
+  },
+  {
+    "id": 8,
+    "price": "Rp. 300K",
+    "kelas": "UI/UX Design Dasar dengan Figma",
+    "imageSrc": "../assets/HomeAsset/auditorcontent8.jpg"
+  },
+  {
+    "id": 9,
+    "price": "Rp. 300K",
+    "kelas": "No-Code Landing Page Builder",
+    "imageSrc": "../assets/HomeAsset/auditorcontent9.jpg"
+  }
+]

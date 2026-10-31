@@ -61,7 +61,7 @@
 
 /* disabled btn */
 .btn-app:disabled {
-  cursor: not-allowed;
+  cursor: pointer;
   color: var(--greyscale-500);
 }
 .btn-app.is-solid:disabled {

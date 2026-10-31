@@ -21,17 +21,17 @@
   border-radius: 2px;
 }
 .user-name {
-  display: none;
+  display: block;
+  color: var(--textdark-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 .user-icon {
   display: none;
 }
 
 @media (min-width: 1024px) {
-  .user-name {
-    display: block;
-    color: var(--textdark-secondary);
-  }
   .user-icon {
     display: block;
     width: 44px;
