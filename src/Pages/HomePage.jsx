@@ -2,16 +2,6 @@ import "../styles/home.css";
 import { useState } from "react";
 import { useOutletContext } from "react-router";
 
-import imageSrc1 from "../assets/HomeAsset/auditorcontent1.jpg";
-import imageSrc2 from "../assets/HomeAsset/auditorcontent2.jpg";
-import imageSrc3 from "../assets/HomeAsset/auditorcontent3.jpg";
-import imageSrc4 from "../assets/HomeAsset/auditorcontent4.jpg";
-import imageSrc5 from "../assets/HomeAsset/auditorcontent5.jpg";
-import imageSrc6 from "../assets/HomeAsset/auditorcontent6.jpg";
-import imageSrc7 from "../assets/HomeAsset/auditorcontent7.jpg";
-import imageSrc8 from "../assets/HomeAsset/auditorcontent8.jpg";
-import imageSrc9 from "../assets/HomeAsset/auditorcontent9.jpg";
-
 import HeroSec from "../component/Organism/HeroSec.jsx";
 import CourseCategory from "../component/molecule/CourseCategory.jsx";
 import CourseCard from "../component/Organism/CourseCard.jsx";
