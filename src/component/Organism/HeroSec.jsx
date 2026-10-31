@@ -1,7 +1,7 @@
 import "./HeroSec.css";
 import Button from "../atoms/Button";
 
-function HeroSec() {
+function HeroSec({ isAdmin, onAdd }) {
   return (
     <section className="hero-section">
       <div className="hero-content">
@@ -11,7 +11,9 @@ function HeroSec() {
         <p className="body-medium-medium" style={{ color: "var(--textlight-primary)", textAlign: "center" }}>
           Temukan ilmu baru yang menarik dan mendalam melalui koleksi video pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan pemahaman anda
         </p>
-        <Button className="hero-button">Temukan Video Course Untuk Dipelajari!</Button>
+        <Button className="hero-button" onClick={isAdmin ? onAdd : undefined}>
+          {isAdmin ? "Tambah Kelas" : "Temukan Video Course Untuk Dipelajari!"}
+        </Button>
       </div>
     </section>
   );

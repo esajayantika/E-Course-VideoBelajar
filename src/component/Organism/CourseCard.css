@@ -2,7 +2,7 @@
 .courses-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 100%;
   max-width: 384px;
   width: 100%;
   padding: var(--space-4);
@@ -14,12 +14,12 @@
 .detail-courses {
   display: flex;
   gap: var(--space-4);
+  min-width: 0;
 }
 .course-img {
   border-radius: var(--radius-lg);
-  width: 82px;
+  width: 96px;
   height: 82px;
-  aspect-ratio: 1/1;
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -35,6 +35,11 @@
 .detail-desc {
   display: none;
 }
+.admin-action {
+  display: flex;
+  gap: var(--gap-md);
+  margin-top: auto;
+}
 
 @media (min-width: 992px) {
   .detail-courses {
@@ -44,6 +49,7 @@
     width: 100%;
     max-width: 344px;
     height: 193px;
+    max-height: none;
   }
 
   .detail-desc {
