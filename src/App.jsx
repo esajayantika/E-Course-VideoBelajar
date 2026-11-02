@@ -5,6 +5,7 @@ import HomePage from "./Pages/HomePage.jsx";
 import MainLayout from "./Pages/MainLayout.jsx";
 import Navbar from "./component/molecule/Navbar.jsx";
 import Navhome from "./component/molecule/Navhome.jsx";
+import Sandbox from "./Pages/SandBox.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route element={<MainLayout navbar={<Navbar />} />}>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/sandbox" element={<Sandbox />} />
         </Route>
         <Route element={<MainLayout navbar={<Navhome />} />}>
           <Route path="/" element={<HomePage />} />
