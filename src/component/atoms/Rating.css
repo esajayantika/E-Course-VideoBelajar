@@ -12,9 +12,15 @@
   width: var(--space-4);
   height: auto;
 }
+.rating--light img[alt="blank-star"] {
+  filter: brightness(4);
+}
+.rating--light .rating-score {
+  color: #c1c2c4;
+}
 .rating-score {
   font-size: var(--space-3);
-  color: var(--textdark-secondary);
+  color: var(--rating-color, var(--textdark-secondary));
   text-decoration: underline;
   font-weight: 500;
 }

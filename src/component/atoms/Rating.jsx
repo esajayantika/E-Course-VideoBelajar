@@ -3,9 +3,9 @@ import Star from "../../assets/HomeAsset/Star.svg";
 import HalfStar from "../../assets/HomeAsset/MaskedStar.svg";
 import BlankStar from "../../assets/HomeAsset/BlankStar.svg";
 
-function Rating() {
+function Rating({ light = false }) {
   return (
-    <div className="rating">
+    <div className={`rating ${light ? "rating--light" : ""}`}>
       <div className="stars">
         <img src={Star} alt="star" />
         <img src={Star} alt="star" />
