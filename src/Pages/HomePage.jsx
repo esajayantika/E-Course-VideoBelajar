@@ -14,10 +14,6 @@ import courseCollection from "../data/courseCollection.json";
 function HomePage() {
   const [courses, setCourses] = useState(courseCollection);
   const { isAdmin } = useOutletContext();
-  // helper read image
-  const getImageUrl = (path) => {
-    return new URL(path, import.meta.url).href;
-  };
 
   // Fungsi Tambah data dengan State
   const handleAdd = () => {
@@ -55,7 +51,7 @@ function HomePage() {
         <div className="courses-grid">
           {/* Read all Array courseCollection.json */}
           {courses.map((course) => (
-            <CourseCard key={course.id} price={course.price} imageSrc={getImageUrl(course.imageSrc)} kelas={course.kelas} isAdmin={isAdmin} onEdit={() => handleEdit(course.id)} onDelete={() => handleDelete(course.id)} />
+            <CourseCard key={course.id} price={course.price} imageSrc={course.imageSrc} kelas={course.kelas} isAdmin={isAdmin} onEdit={() => handleEdit(course.id)} onDelete={() => handleDelete(course.id)} />
           ))}
         </div>
       </section>
