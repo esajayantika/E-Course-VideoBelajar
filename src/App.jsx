@@ -6,6 +6,7 @@ import MainLayout from "./Pages/MainLayout.jsx";
 import Navbar from "./component/molecule/Navbar.jsx";
 import Navhome from "./component/molecule/Navhome.jsx";
 import Sandbox from "./Pages/SandBox.jsx";
+import DetailPage from "./Pages/DetailPage.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         </Route>
         <Route element={<MainLayout navbar={<Navhome />} />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/detail" element={<DetailPage />} />
         </Route>
       </Routes>
     </>

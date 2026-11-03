@@ -3,7 +3,7 @@ import Rate from "../molecule/Rate.jsx";
 import MentorProfile from "../molecule/MentorProfile.jsx";
 import Button from "../atoms/Button.jsx";
 
-function CourseCard({ price, originalPrice, imageSrc, isAdmin, onEdit, onDelete, kelas }) {
+function CourseCard({ price, originalPrice, imageSrc, isAdmin, onEdit, onDelete, kelas, name, position, company }) {
   return (
     <article className="courses-content">
       <div className="detail-courses">
@@ -11,7 +11,7 @@ function CourseCard({ price, originalPrice, imageSrc, isAdmin, onEdit, onDelete,
         <div className="detail-info">
           <h4 className="heading-6">{kelas}</h4>
           <p className="detail-desc body-medium-medium">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...</p>
-          <MentorProfile />
+          <MentorProfile name={name} position={position} company={company} />
         </div>
       </div>
       <Rate price={price} originalPrice={originalPrice} />

@@ -90,7 +90,7 @@
 .heading-5 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: clamp(18px, 0.19vw + 17.29px, 20px);
 }
 .heading-6 {
   font-family: "Poppins", sans-serif;
