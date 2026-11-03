@@ -1,16 +1,11 @@
-# React + Vite
+# Akses Web-App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Web-app videobelajar bisa diakses di https://coursevideobelajar.vercel.app/
 
-Currently, two official plugins are available:
+# Mode Admin
+<img width="232" height="94" alt="image" src="https://github.com/user-attachments/assets/27c02d44-82f8-4c16-aedf-92c12cfc5880" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Tekan toggle di sebelah icon profile di pojok kanan atas untuk berganti ke mode Admin agar bisa melakukan operasi CRUD dengan penerapan props dan State.
 
-## React Compiler
+Masih menggunakan state react tanpa Localstorage maupun BE (database).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
