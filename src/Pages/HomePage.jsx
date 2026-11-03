@@ -51,7 +51,18 @@ function HomePage() {
         <div className="courses-grid">
           {/* Read all Array courseCollection.json */}
           {courses.map((course) => (
-            <CourseCard key={course.id} price={course.price} imageSrc={course.imageSrc} kelas={course.kelas} isAdmin={isAdmin} onEdit={() => handleEdit(course.id)} onDelete={() => handleDelete(course.id)} />
+            <CourseCard
+              key={course.id}
+              price={course.price}
+              imageSrc={course.imageSrc}
+              kelas={course.kelas}
+              isAdmin={isAdmin}
+              onEdit={() => handleEdit(course.id)}
+              onDelete={() => handleDelete(course.id)}
+              name={"Jenna Ortega"}
+              position={"Senior Accountant"}
+              company={"Gojek"}
+            />
           ))}
         </div>
       </section>

@@ -1,0 +1,15 @@
+.personal-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: var(--space-3);
+  gap: var(--gap-lg);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+}
+
+@media (min-width: 992px) {
+  .personal-card {
+    max-width: 367px;
+  }
+}

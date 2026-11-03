@@ -1,0 +1,23 @@
+.preview-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--gap-xl);
+  padding: var(--space-5);
+  border: 1px solid var(--border-2);
+}
+.card-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--gap-lg);
+}
+
+@media (min-width: 1024px) {
+  .preview-card {
+    max-width: 798px;
+  }
+  .card-group {
+    flex-direction: row;
+  }
+}
