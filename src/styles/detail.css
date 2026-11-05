@@ -12,6 +12,9 @@
   border: 1px solid var(--border-2);
   border-radius: var(--radius-lg);
 }
+.mentor-card {
+  margin-bottom: 30px;
+}
 .materi {
   display: flex;
   flex-direction: column;
@@ -20,18 +23,37 @@
   gap: var(--gap-xl);
   border: 1px solid var(--border-2);
   border-radius: var(--radius-lg);
+  margin-bottom: 30px;
 }
 .materi-group {
+  width: 100%;
   gap: var(--gap-xl);
 }
 .menu-materi {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
+  min-width: 0;
   background: none;
   border: none;
   cursor: pointer;
   gap: var(--gap-md);
   padding: 0;
+  margin-bottom: 30px;
+  margin-top: 12px;
+}
+.judul-materi {
+  text-align: start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex: 1;
+  margin-right: 8px;
+}
+.icon-menu {
+  flex-shrink: 0;
 }
 .konten-materi {
   display: flex;
@@ -42,4 +64,38 @@
 .konten {
   display: flex;
   justify-content: space-between;
+  padding: var(--space-3);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+}
+.tipe-konten {
+  display: none;
+}
+/* judul kategori courses */
+.courses-title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--gap-lg);
+}
+.detail-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+@media (min-width: 992px) {
+  .tipe-konten {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-md);
+  }
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-items: stretch;
+  }
 }
