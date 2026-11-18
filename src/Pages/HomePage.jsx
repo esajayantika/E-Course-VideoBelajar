@@ -2,44 +2,20 @@ import "../styles/home.css";
 import { useState } from "react";
 import { useOutletContext } from "react-router";
 
-import imageSrc1 from "/courses/auditorcontent1.jpg";
-
 import HeroSec from "../component/Organism/HeroSec.jsx";
 import CourseCategory from "../component/molecule/CourseCategory.jsx";
 import CourseCard from "../component/Organism/CourseCard.jsx";
 import ActionSection from "../component/Organism/ActionSection.jsx";
 import Footer from "../component/Organism/Footer.jsx";
-import courseCollection from "../data/courseCollection.json";
+import { useCourses } from "../context/CourseContext.jsx";
 
 function HomePage() {
-  const [courses, setCourses] = useState(courseCollection);
   const { isAdmin } = useOutletContext();
-
-  // Fungsi Tambah data dengan State
-  const handleAdd = () => {
-    const kelas = prompt("Kelas Baru: ", "Input kelas");
-    const price = prompt("Harga Khusus baru: ", "Rp. 300K");
-    if (!price || !kelas) return;
-    setCourses([...courses, { id: Date.now(), kelas, price, imageSrc: imageSrc1 }]);
-  };
-
-  // Fungsi Edit data dengan state
-  const handleEdit = (id) => {
-    const course = courses.find((course) => course.id === id);
-    const newKelas = prompt("Ubah data kelas: ", course.kelas);
-    const newPrice = prompt("Ubah harga kelas: ", course.price);
-
-    setCourses(courses.map((course) => (course.id === id ? { ...course, kelas: newKelas || course.kelas, price: newPrice || course.price } : course)));
-  };
-
-  // Fungsi hapus data dengan state
-  const handleDelete = (id) => {
-    setCourses(courses.filter((course) => course.id !== id));
-  };
+  const { courses, coursesIsLoading, coursesError } = useCourses();
 
   return (
     <>
-      <HeroSec isAdmin={isAdmin} onAdd={handleAdd} />
+      <HeroSec isAdmin={isAdmin} />
       <section className="courses-section">
         <div className="courses-title">
           <h1 className="heading-3" style={{ lineHeight: "1.1" }}>
@@ -49,20 +25,12 @@ function HomePage() {
         </div>
         <CourseCategory />
         <div className="courses-grid">
-          {/* Read all Array courseCollection.json */}
+          {/* Read all Array from MockApi */}
+          {/* Handle loading hanya muncul ketika aray masih kosong/refresh pertama */}
+          {coursesIsLoading && courses.length === 0 && <p>Loading...</p>}
+          {coursesError && <p style={{ color: "red" }}>{coursesError}</p>}
           {courses.map((course) => (
-            <CourseCard
-              key={course.id}
-              price={course.price}
-              imageSrc={course.imageSrc}
-              kelas={course.kelas}
-              isAdmin={isAdmin}
-              onEdit={() => handleEdit(course.id)}
-              onDelete={() => handleDelete(course.id)}
-              name={"Jenna Ortega"}
-              position={"Senior Accountant"}
-              company={"Gojek"}
-            />
+            <CourseCard course={course} key={course.id} isAdmin={isAdmin} name={"Jenna Ortega"} position={"Senior Accountant"} company={"Gojek"} />
           ))}
         </div>
       </section>
