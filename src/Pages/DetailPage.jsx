@@ -22,7 +22,7 @@ function DetailPage() {
       <div className="detail-page">
         <HeroDetail kelas={courses[2].kelas} imageSrc={courses[2].imageSrc} />
         <div className="row body-detail">
-          <div className="col-lg-8 col-md-7 col-12 mb-4 g-3 order-2 order-lg-1" style={{ gap: "var(--gap-xl)" }}>
+          <div className="col-lg-8 col-md-7 col-12 mb-4 px-0 order-2 order-lg-1">
             <div className="deskripsi-kelas mb-4">
               <h3 className="heading-5">Deskripsi</h3>
               <p className="body-medium-regular">
@@ -126,7 +126,7 @@ function DetailPage() {
               <h3 className="body-medium-medium">Ekspansi Pengetahuan Anda dengan Rekomendasi Spesial Kami!</h3>
             </div>
           </div>
-          <div className="col-lg-4 col-md-5 col-12 g-3 order-1 order-lg-2" style={{ padding: "0px" }}>
+          <div className="col-lg-4 col-md-5 col-12 px-0 ps-lg-4 order-1 order-lg-2" style={{ marginBottom: "30px" }}>
             <CheckoutCard price={"Rp. 200K"} originalPrice={"Rp.400K"} kelas={"Belajar Programming"} discount={"50%"} timediscount={"5"}>
               <Button>Beli Sekarang</Button>
             </CheckoutCard>

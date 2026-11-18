@@ -3,54 +3,63 @@
     "id": 1,
     "price": "Rp. 300K",
     "kelas": "TikTok & Reels Viral untuk UMKM",
-    "imageSrc": "/courses/auditorcontent1.jpg"
+    "imageSrc": "/courses/auditorcontent1.jpg",
+    "Deskripsi": "Pelajari strategi praktis merancang konten video pendek yang konsisten mendatangkan engagement tinggi di TikTok dan Instagram Reels. Cocok untuk pelaku usaha yang ingin mendongkrak penjualan organik tanpa harus merogoh kocek dalam untuk iklan berbayar."
   },
   {
     "id": 2,
     "price": "Rp. 300K",
     "kelas": "Performance Marketing 101: Strategi ROI",
-    "imageSrc": "/courses/auditorcontent2.jpg"
+    "imageSrc": "/courses/auditorcontent2.jpg",
+    "Deskripsi": "Kuasai dasar-dasar pemasaran digital berbasis performa untuk memastikan setiap rupiah anggaran iklan memberikan pengembalian investasi (ROI) yang terukur. Kursus ini membahas cara membaca metrik iklan, optimasi target audiens, dan A/B testing."
   },
   {
     "id": 3,
     "price": "Rp. 300K",
     "kelas": "Financial Modeling Startup & UMKM",
-    "imageSrc": "/courses/auditorcontent3.jpg"
+    "imageSrc": "/courses/auditorcontent3.jpg",
+    "Deskripsi": "Pahami cara menyusun proyeksi keuangan bisnis dari nol secara akurat. Kursus ini membekali pemilik usaha dan founder dengan kemampuan merancang laporan laba rugi, arus kas, serta skenario burn rate untuk kebutuhan internal maupun pitching investor."
   },
   {
     "id": 4,
     "price": "Rp. 300K",
     "kelas": "Manajemen Gudang & Stok Tanpa Selisih",
-    "imageSrc": "/courses/auditorcontent4.jpg"
+    "imageSrc": "/courses/auditorcontent4.jpg",
+    "Deskripsi": "Kunci operasional bisnis yang sehat terletak pada akurasi stok gudang. Kelas ini membahas standar operasional prosedur (SOP) keluar-masuk barang, teknik stock opname yang efektif, serta cara meminimalisir angka kehilangan atau selisih inventaris."
   },
   {
     "id": 5,
     "price": "Rp. 300K",
     "kelas": "Operational Excellence & Otomasi Bisnis",
-    "imageSrc": "/courses/auditorcontent5.jpg"
+    "imageSrc": "/courses/auditorcontent5.jpg",
+    "Deskripsi": "Tingkatkan efisiensi operasional bisnis Anda dengan memangkas proses manual yang membuang waktu. Pelajari cara mengidentifikasi hambatan (bottleneck) dalam operasional harian dan mengintegrasikan alat otomatisasi digital."
   },
   {
     "id": 6,
     "price": "Rp. 300K",
     "kelas": "Data-Driven Decision Making",
-    "imageSrc": "/courses/auditorcontent6.jpg"
+    "imageSrc": "/courses/auditorcontent6.jpg",
+    "Deskripsi": "Berhenti mengambil keputusan bisnis hanya berdasarkan 'kata hati'. Kursus ini mengajarkan cara mengumpulkan, membaca, dan menganalisis data operasional atau penjualan harian agar setiap keputusan strategis lebih objektif dan minim risiko."
   },
   {
     "id": 7,
     "price": "Rp. 300K",
-    "kelas": "Public Speaking & Kpercayaan Diri",
-    "imageSrc": "/courses/auditorcontent7.jpg"
+    "kelas": "Public Speaking & Kepercayaan Diri",
+    "imageSrc": "/courses/auditorcontent7.jpg",
+    "Deskripsi": "Atasi rasa gugup dan kuasai seni berbicara di depan umum, baik untuk keperluan presentasi bisnis, pitching klien, maupun komunikasi tim internal. Pelajari teknik vokal, bahasa tubuh, dan struktur penyampaian pesan yang memikat."
   },
   {
     "id": 8,
     "price": "Rp. 300K",
     "kelas": "UI/UX Design Dasar dengan Figma",
-    "imageSrc": "/courses/auditorcontent8.jpg"
+    "imageSrc": "/courses/auditorcontent8.jpg",
+    "Deskripsi": "Belajar merancang antarmuka aplikasi dan situs web yang ramah pengguna dari dasar menggunakan Figma. Kursus ini dirancang untuk pemula yang ingin memahami pola pikir desainer dalam menciptakan solusi digital yang estetis dan fungsional."
   },
   {
     "id": 9,
     "price": "Rp. 300K",
     "kelas": "No-Code Landing Page Builder",
-    "imageSrc": "/courses/auditorcontent9.jpg"
+    "imageSrc": "/courses/auditorcontent9.jpg",
+    "Deskripsi": "Bangun halaman landing page profesional untuk kampanye produk atau portofolio bisnis tanpa harus menulis satu baris kode pun. Pelajari cara merancang halaman berkonversi tinggi menggunakan platform drag-and-drop modern."
   }
 ]
