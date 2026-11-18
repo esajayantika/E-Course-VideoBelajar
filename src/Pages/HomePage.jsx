@@ -29,7 +29,7 @@ function HomePage() {
           {/* Handle loading hanya muncul ketika aray masih kosong/refresh pertama */}
           {coursesIsLoading && courses.length === 0 && <p>Loading...</p>}
           {coursesError && <p style={{ color: "red" }}>{coursesError}</p>}
-          {courses.map((course) => (
+          {courses?.map((course) => (
             <CourseCard course={course} key={course.id} isAdmin={isAdmin} name={"Jenna Ortega"} position={"Senior Accountant"} company={"Gojek"} />
           ))}
         </div>
