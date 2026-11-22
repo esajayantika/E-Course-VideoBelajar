@@ -1,0 +1,28 @@
+.textarea-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+#Desc {
+  font-size: var(--space-4);
+  font-family: inherit;
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-1) var(--space-2);
+  height: 250px;
+  outline: none;
+
+  -webkit-appearance: none;
+  appearance: none;
+}
+#Desc:focus {
+  border-color: var(--border-3);
+}
+
+#Desc:-webkit-autofill,
+#Desc:-webkit-autofill:hover,
+#Desc:-webkit-autofill:focus,
+#Desc:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  border-radius: var(--radius-md) !important;
+}

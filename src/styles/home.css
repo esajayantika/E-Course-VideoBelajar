@@ -18,6 +18,9 @@
 footer {
   margin-top: 40px;
 }
+.courses-grid {
+  scroll-margin-top: 80px;
+}
 
 @media (min-width: 1024px) {
   /* tampilan courses-content grid */

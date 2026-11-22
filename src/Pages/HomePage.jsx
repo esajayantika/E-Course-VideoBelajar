@@ -24,7 +24,7 @@ function HomePage() {
           <h3 className="body-medium-medium">Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!</h3>
         </div>
         <CourseCategory />
-        <div className="courses-grid">
+        <div className="courses-grid" id="kelas">
           {/* Read all Array from MockApi */}
           {/* Handle loading hanya muncul ketika aray masih kosong/refresh pertama */}
           {coursesIsLoading && courses.length === 0 && <p>Loading...</p>}
