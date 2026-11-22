@@ -50,12 +50,10 @@ function DetailPage() {
                   desc={"Berkarier di bidang HR selama lebih dari 3 tahun. Saat ini bekerja sebagai Senior Talent Acquisition Specialist di Wings Group Indonesia (Sayap Mas Utama) selama hampir 1 tahun."}
                 />
                 <PersonalCard
-                  name={"Prabowo Subianto"}
-                  position={"President"}
-                  company={"Indonesia"}
-                  desc={
-                    "Mari sukseskan MBG. Ayo sumbang pajak dari segala lini sampai tai dipajakin. Dari Sabang Sampai merauke harus setor pajak. Hutan Dibabat demi kebun sawit kesayangan. Nepotisme dan oligarki adalah jalan ninjaku. Mas Teddy kesayangan akoehhh. Gaji guru tidak penting sukseskan MBG dapat insentif 3 Trilyun."
-                  }
+                  name={"Raka Aditya Pratama"}
+                  position={"Performance Marketing Lead"}
+                  company={"Tokopedia"}
+                  desc={"Berpengalaman di bidang performance marketing selama lebih dari 4 tahun. Saat ini menjabat sebagai Performance Marketing Lead di Tokopedia selama hampir 2 tahun."}
                 />
               </PreviewCard>
             </div>
@@ -115,15 +113,15 @@ function DetailPage() {
             <div className="mentor-card">
               <PreviewCard heading={"Rating dan Review"}>
                 <PersonalCard
-                  name={"Gregorius Edrik Lawanto"}
+                  name={"Nadia Kusuma"}
                   position={"Alumni Batch 2"}
-                  desc={"Berkarier di bidang HR selama lebih dari 3 tahun. Saat ini bekerja sebagai Senior Talent Acquisition Specialist di Wings Group Indonesia (Sayap Mas Utama) selama hampir 1 tahun."}
+                  desc={"Materinya daging banget dan gampang dipahami buat pemula. Penjelasan soal cara baca metrik iklan dan optimasi budget bikin ROAS kampanye bisnis online aku langsung naik dalam dua minggu."}
                   showRating
                 />
                 <PersonalCard
-                  name={"Gregorius Edrik Lawanto"}
+                  name={"Dimas Prasetyo"}
                   position={"Alumni Batch 4"}
-                  desc={"Berkarier di bidang HR selama lebih dari 3 tahun. Saat ini bekerja sebagai Senior Talent Acquisition Specialist di Wings Group Indonesia (Sayap Mas Utama) selama hampir 1 tahun."}
+                  desc={"Studi kasus yang dipakai relevan sama kondisi lapangan sekarang. Bagian A/B testing dan penentuan target audiens beneran ngebantu aku ngurangin boncos pas jalanin Meta Ads."}
                   showRating
                 />
               </PreviewCard>
