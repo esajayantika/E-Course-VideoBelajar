@@ -7,10 +7,12 @@ import Navbar from "./component/molecule/Navbar.jsx";
 import Navhome from "./component/molecule/Navhome.jsx";
 import Sandbox from "./Pages/SandBox.jsx";
 import DetailPage from "./Pages/DetailPage.jsx";
+import ScrolltoTop from "./ScrolltoTop.jsx";
 
 function App() {
   return (
     <>
+      <ScrolltoTop />
       <Routes>
         <Route element={<MainLayout navbar={<Navbar />} />}>
           <Route path="/login" element={<LoginPage />} />
@@ -19,7 +21,7 @@ function App() {
         </Route>
         <Route element={<MainLayout navbar={<Navhome />} />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/detail" element={<DetailPage />} />
+          <Route path="/detail/:id/:kelas" element={<DetailPage />} />
         </Route>
       </Routes>
     </>

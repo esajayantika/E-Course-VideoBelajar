@@ -16,7 +16,7 @@ const InputField = forwardRef(function InputField({ id, labelText, required = fa
           {suffix && <div className="input-suffix">{suffix}</div>}
         </div>
       </div>
-      {error && <span style={{ color: "red", fontSize: "12px", marginTop: "4px" }}>{error}</span>}
+      {error && <span style={{ display: "block", color: "red", fontSize: "12px", marginTop: "2px" }}>{error}</span>}
     </div>
   );
 });

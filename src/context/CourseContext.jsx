@@ -14,37 +14,27 @@ export function CourseProvider({ children }) {
   const { deleteCourse, deleteCourseIsLoading, deleteCourseError } = useDeleteCourse();
 
   // Fungsi Tambah data dengan custom hook
-  const handleAdd = async () => {
-    const kelas = prompt("Kelas Baru: ", "Input kelas");
-    const price = prompt("Harga Khusus baru: ", "Rp. 300K");
-    const Deskripsi = prompt("Deskripsi Kelas: ", "input desc...");
-    if (!price || !kelas || !Deskripsi) return;
-    await createCourses({ price, kelas, imageSrc: imageSrc1, Deskripsi });
+  const handleAdd = async (newData) => {
+    if (!newData.price || !newData.kelas || !newData.deskripsi) return;
+    await createCourses({ price: newData.price, kelas: newData.kelas, imageSrc: imageSrc1, Deskripsi: newData.deskripsi });
     await fetchCourses();
   };
 
   // Fungsi Edit data dengan custom hook
-  const handleEdit = async (course) => {
-    const newKelas = prompt("Ubah data kelas: ", course.kelas);
-    const newPrice = prompt("Ubah harga kelas: ", course.price);
-    const newDesc = prompt("Ubah deskripsi kelas: ", course.Deskripsi);
-
-    // Kalau cancel -> prompt null
-    if (newKelas === null || newPrice === null || newDesc === null) return;
-
+  const handleEdit = async (course, newData) => {
     await editCourse(course.id, {
       ...course,
       // ambil nilai yang ingin di edit untuk diupdate, atau pakai data lama
-      kelas: newKelas || course.kelas,
-      price: newPrice || course.price,
-      Deskripsi: newDesc || course.Deskripsi,
+      kelas: newData.kelas || course.kelas,
+      price: newData.price || course.price,
+      Deskripsi: newData.deskripsi || course.Deskripsi,
     });
     await fetchCourses();
   };
 
   // Fungsi hapus data dengan custom hook
-  const handleDelete = async (id) => {
-    await deleteCourse(id);
+  const handleDelete = async (course) => {
+    await deleteCourse(course.id);
     await fetchCourses();
   };
 

@@ -1,5 +1,7 @@
 import "../styles/detail.css";
 import { useState } from "react";
+import { useParams } from "react-router";
+import { useOutletContext } from "react-router";
 
 import HeroDetail from "../component/Organism/HeroDetail";
 import courseCollection from "../data/courseCollection.json";
@@ -13,24 +15,31 @@ import Video from "../assets/HomeAsset/Play_Circle.svg";
 import Duration from "../assets/HomeAsset/Clock.svg";
 import CourseCard from "../component/Organism/CourseCard";
 import Footer from "../component/Organism/Footer";
+import { useCourses } from "../context/CourseContext";
 
 function DetailPage() {
-  const [courses, setCourses] = useState(courseCollection);
+  const { isAdmin } = useOutletContext();
+  const params = useParams();
+  const { courses, coursesIsLoading } = useCourses();
+  const course = courses.find((kelas) => kelas.id === params.id);
+
+  if (coursesIsLoading || !course) return <p>Loading....</p>;
 
   return (
     <>
       <div className="detail-page">
-        <HeroDetail kelas={courses[2].kelas} imageSrc={courses[2].imageSrc} />
+        {coursesIsLoading && <p>Loading...</p>}
+        <div>
+          <span className="body-medium-regular">
+            Home / {params.id} / {params.kelas}
+          </span>
+        </div>
+        <HeroDetail />
         <div className="row body-detail">
           <div className="col-lg-8 col-md-7 col-12 mb-4 px-0 order-2 order-lg-1">
             <div className="deskripsi-kelas mb-4">
               <h3 className="heading-5">Deskripsi</h3>
-              <p className="body-medium-regular">
-                Foundations of User Experience (UX) Design adalah yang pertama dari rangkaian tujuh kursus yang akan membekali Anda dengan keterampilan yang dibutuhkan untuk melamar pekerjaan tingkat pemula dalam desain pengalaman pengguna.
-                Desainer UX fokus pada interaksi yang dilakukan orang dengan produk seperti situs web, aplikasi seluler, dan objek fisik. Desainer UX membuat interaksi sehari-hari itu dapat digunakan, menyenangkan, dan dapat diakses. Peran
-                seorang desainer UX tingkat pemula mungkin termasuk berempati dengan pengguna, menentukan poin rasa sakit mereka, memunculkan ide untuk solusi desain, membuat wireframe, prototipe, dan maket, dan menguji desain untuk
-                mendapatkan umpan balik.
-              </p>
+              <p className="body-medium-regular">{course.Deskripsi}</p>
             </div>
             <div className="mentor-card">
               <PreviewCard heading={"Belajar Bersama Tutor Profesional"}>
@@ -127,16 +136,19 @@ function DetailPage() {
             </div>
           </div>
           <div className="col-lg-4 col-md-5 col-12 px-0 ps-lg-4 order-1 order-lg-2" style={{ marginBottom: "30px" }}>
-            <CheckoutCard price={"Rp. 200K"} originalPrice={"Rp.400K"} kelas={"Belajar Programming"} discount={"50%"} timediscount={"5"}>
+            <CheckoutCard price={"Rp. 200K"} originalPrice={"Rp.400K"} kelas={params.kelas} discount={"50%"} timediscount={"5"}>
               <Button>Beli Sekarang</Button>
             </CheckoutCard>
           </div>
         </div>
         <div className="courses-grid">
           {/* Read all Array courseCollection.json */}
-          {courses.slice(0, 3).map((course) => (
-            <CourseCard key={course.id} price={course.price} imageSrc={course.imageSrc} kelas={course.kelas} name={"Jenna Ortega"} position={"Senior Accountant"} company={"Gojek"} />
-          ))}
+          {courses
+            .filter((kelas) => kelas.id !== params.id)
+            .slice(0, 3)
+            .map((course) => (
+              <CourseCard key={course.id} course={course} isAdmin={isAdmin} name={"Jenna Ortega"} position={"Senior Accountant"} company={"Gojek"} />
+            ))}
         </div>
         <Footer />
       </div>
