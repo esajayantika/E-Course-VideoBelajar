@@ -10,12 +10,11 @@ const CourseContext = createContext();
 export function CourseProvider({ children }) {
   const { courses, coursesIsLoading, coursesError, fetchCourses } = useFetchCourse();
   const { createCourses, createCoursesIsLoading, createCoursesError } = useCreateCourse();
-  const { editCourse, editCoursesIsLoading, editCoursesError } = useEditCourse();
-  const { deleteCourse, deleteCourseIsLoading, deleteCourseError } = useDeleteCourse();
+  const { editCourse, editCoursesError } = useEditCourse();
+  const { deleteCourse, deleteCourseError } = useDeleteCourse();
 
   // Fungsi Tambah data dengan custom hook
   const handleAdd = async (newData) => {
-    if (!newData.price || !newData.kelas || !newData.deskripsi) return;
     await createCourses({ price: newData.price, kelas: newData.kelas, imageSrc: imageSrc1, Deskripsi: newData.deskripsi });
     await fetchCourses();
   };
@@ -38,7 +37,7 @@ export function CourseProvider({ children }) {
     await fetchCourses();
   };
 
-  return <CourseContext.Provider value={{ courses, coursesIsLoading, coursesError, editCoursesIsLoading, deleteCourseIsLoading, handleAdd, handleDelete, handleEdit }}>{children}</CourseContext.Provider>;
+  return <CourseContext.Provider value={{ courses, coursesIsLoading, coursesError, handleAdd, handleDelete, handleEdit }}>{children}</CourseContext.Provider>;
 }
 
 export const useCourses = () => useContext(CourseContext);
